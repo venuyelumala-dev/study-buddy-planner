@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+Student Task & Study Planner
 
-## Project info
+A simple web application to manage tasks, subjects, priorities, and deadlines, built to practice HTML, CSS, JavaScript, Bootstrap, and React. This project is beginner-friendly and demonstrates a practical understanding of frontend development with React and client-side storage.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Features
 
-## How can I edit this code?
+Clean and responsive UI using Bootstrap
 
-There are several ways of editing your application.
+Navigation bar for easy navigation
 
-**Use Lovable**
+Add tasks with:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Task title
 
-Changes made via Lovable will be committed automatically to this repo.
+Subject
 
-**Use your preferred IDE**
+Priority (Low / Medium / High)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Due date
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Display tasks in a simple list or card layout
 
-Follow these steps:
+Mark tasks as completed
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Delete tasks
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Priority-based sorting: High priority tasks appear first; tasks sorted by due date
 
-# Step 3: Install the necessary dependencies.
-npm i
+Persistent storage using localStorage or IndexedDB, so tasks remain after page reload
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Technologies Used
 
-**Edit a file directly in GitHub**
+HTML – Structure of the app
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+CSS – Styling and layout
 
-**Use GitHub Codespaces**
+Bootstrap – Responsive design and components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+JavaScript – Task logic and sorting
+changed to typescript for aftereffects...
 
-## What technologies are used for this project?
+React – Functional components, useState, and useEffect
 
-This project is built with:
+How to Use
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Clone or download the repository
 
-## How can I deploy this project?
+Open index.html (or run via a local server if using React)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Use the form to add tasks
 
-## Can I connect a custom domain to my Lovable project?
+Mark tasks as completed or delete them
 
-Yes, you can!
+Tasks will be saved in your browser for persistence
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Project Goal
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is designed as a learning project to practice frontend development, React state management, and client-side storage. It focuses on simplicity, readability, and functionality, creating a realistic, human-made application without over-engineered features.
+
+Future Improvements 
+
+Add editing functionality for tasks
+
+Add filtering by subject or priority
+
+Add a calendar view for tasks
+
+Use a backend for multi-user support
