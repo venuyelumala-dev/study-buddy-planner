@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -46,6 +49,18 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        priority: {
+          high: "hsl(var(--priority-high))",
+          "high-bg": "hsl(var(--priority-high-bg))",
+          medium: "hsl(var(--priority-medium))",
+          "medium-bg": "hsl(var(--priority-medium-bg))",
+          low: "hsl(var(--priority-low))",
+          "low-bg": "hsl(var(--priority-low-bg))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
