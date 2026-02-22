@@ -37,6 +37,12 @@ export function useTasks() {
     setTasks((prev) => prev.filter((t) => t.id !== id));
   };
 
+  const editTask = (id: string, updates: Partial<Omit<Task, "id" | "createdAt">>) => {
+    setTasks((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, ...updates } : t))
+    );
+  };
+
   const priorityOrder = { high: 0, medium: 1, low: 2 };
 
   const sortedTasks = [...tasks].sort((a, b) => {
@@ -46,5 +52,5 @@ export function useTasks() {
     return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
   });
 
-  return { tasks: sortedTasks, addTask, toggleTask, deleteTask };
+  return { tasks: sortedTasks, rawTasks: tasks, addTask, toggleTask, deleteTask, editTask };
 }

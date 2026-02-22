@@ -1,16 +1,17 @@
 import { Task } from "@/types/task";
 import { PriorityBadge } from "./PriorityBadge";
 import { format, isPast, isToday } from "date-fns";
-import { Check, Trash2, CalendarDays, BookOpen } from "lucide-react";
+import { Check, Trash2, CalendarDays, BookOpen, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TaskCardProps {
   task: Task;
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
+  onEdit: (task: Task) => void;
 }
 
-export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
+export function TaskCard({ task, onToggle, onDelete, onEdit }: TaskCardProps) {
   const dueDate = new Date(task.dueDate);
   const overdue = !task.completed && isPast(dueDate) && !isToday(dueDate);
 
@@ -64,12 +65,20 @@ export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
         </div>
       </div>
 
-      <button
-        onClick={() => onDelete(task.id)}
-        className="shrink-0 rounded-lg p-1.5 text-muted-foreground opacity-0 transition-all hover:bg-destructive/10 hover:text-destructive group-hover:opacity-100"
-      >
-        <Trash2 className="h-4 w-4" />
-      </button>
+      <div className="flex shrink-0 gap-1 opacity-0 transition-all group-hover:opacity-100">
+        <button
+          onClick={() => onEdit(task)}
+          className="rounded-lg p-1.5 text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+        >
+          <Pencil className="h-4 w-4" />
+        </button>
+        <button
+          onClick={() => onDelete(task.id)}
+          className="rounded-lg p-1.5 text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-colors"
+        >
+          <Trash2 className="h-4 w-4" />
+        </button>
+      </div>
     </div>
   );
 }
